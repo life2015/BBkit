@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/bbcode" />
             <option value="$PROJECT_DIR$/bbkit" />
           </set>
         </option>

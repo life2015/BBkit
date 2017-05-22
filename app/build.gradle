@@ -25,7 +25,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(':bbcode')
+//    compile project(':bbcode')
     compile project(':bbkit')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 //    compile "org.jetbrains.anko:anko:0.10.0"

@@ -7,6 +7,7 @@ import android.text.method.LinkMovementMethod
 import android.util.Log
 import android.view.MotionEvent
 import android.widget.TextView
+import com.twtstudio.retrox.bbcode.NaiveHtmlUtils
 import org.kefirsf.bb.BBProcessorFactory
 import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter
 import org.sufficientlysecure.htmltextview.HtmlTextView
@@ -44,7 +45,11 @@ class BBActivity : AppCompatActivity(){
                 ""
 
         val bbText = com.twtstudio.retrox.bbcode.BBCodeParse.bbcode2Html(htmlText)
+
         Log.d("tag",bbText)
+        NaiveHtmlUtils.GetHtmlImageSrcList(bbText).forEach {
+            Log.d("img",it)
+        }
 
         bbTextView.setHtml(bbText,HtmlHttpImageGetter(bbTextView))
 

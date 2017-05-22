@@ -1,5 +1,6 @@
 package com.twtstudio.retrox.bbcode;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +22,7 @@ public class BBCodeParse {
 
         return html;
     }
+
 
     /**
      * Parse List Tag: [list] [*]Entry 1 [*]Entry 2 [/list] or [list] *Entry 1 *Entry 2 [/list]
