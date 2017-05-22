@@ -9,6 +9,11 @@ import java.util.Map;
 
 public class BBCodeParse {
 
+    /**
+     * BBcode转html
+     * @param text bbcode
+     * @return
+     */
     public static String bbcode2Html(String text) {
         String html = text;
         Map<String, String> bbMap = BBCodeMaps.getBBcodeMap();

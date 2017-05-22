@@ -44,14 +44,18 @@ class BBActivity : AppCompatActivity(){
                 "[center]This is some centered text[/center]" +
                 ""
 
-        val bbText = com.twtstudio.retrox.bbcode.BBCodeParse.bbcode2Html(htmlText)
+        // bbcode转html
+        val bbHtml = com.twtstudio.retrox.bbcode.BBCodeParse.bbcode2Html(htmlText)
 
-        Log.d("tag",bbText)
-        NaiveHtmlUtils.GetHtmlImageSrcList(bbText).forEach {
+        Log.d("tag",bbHtml)
+        // 测试获取图片的方法
+        NaiveHtmlUtils.GetHtmlImageSrcList(bbHtml).forEach {
             Log.d("img",it)
         }
 
-        bbTextView.setHtml(bbText,HtmlHttpImageGetter(bbTextView))
+        // ImageGetter是必须的，HttpImageGetter是用来获取网络图片的
+        // 如果后台骚搞图片的URL，继承重写getDrawable方法
+        bbTextView.setHtml(bbHtml,HtmlHttpImageGetter(bbTextView))
 
     }
 }

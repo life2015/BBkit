@@ -12,7 +12,6 @@ import java.util.regex.Pattern;
 
 public class NaiveHtmlUtils {
 
-
     /**
      * 获取HTML文件里面的IMG标签的SRC地址
      *
